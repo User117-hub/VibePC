@@ -85,10 +85,11 @@ body {
     font-weight: bold;
 }
 
-.info_precio button {
+.info_precio #btn-agregar{
     background-color: #0a4d8c;
     color: white;
     border: none;
+    text-decoration: none;
     padding: 10px 25px;
     border-radius: 20px;
     font-weight: bold;
