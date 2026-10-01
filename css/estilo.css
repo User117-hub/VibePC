@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: white;
+    border: solid 2px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header img {
+    margin: 20px;
+}
+
+header .iconos {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.anuncio_1 {
+    display: flex;
+    padding: 50px;
+    justify-content: center;
+}
+
+.anuncio_1 img {
+    max-height: 80%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.material-symbols-outlined {
+    color: #0089e4;
+}
+
+.cuadro_producto {
+    background-color: #8bb8d6;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 80%;
+    gap: 20px;
+    max-height: 40%;
+}
+
+.cuadro_producto img {
+    width: 200px;
+    height: 180px;
+    object-fit: contain;
+}
+
+.cuadro_producto article {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.cuadro_producto h2 {
+    font-size: 1.1rem;
+    color: #000;
+}
+
+.info_precio {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.info_precio span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.info_precio button {
+    background-color: #0a4d8c;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.detalles_estado {
+    display: flex;
+    gap: 30px;
+    margin-top: 15px;
+}
+
+.item_estado {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    color: #000;
+}
+
+.item_estado .material-symbols-outlined {
+    font-size: 24px;
+    color: #000;
+}
