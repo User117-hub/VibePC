@@ -1,3 +1,4 @@
+```css
 body {
     width: 100%;
     height: 100vh;
@@ -20,8 +21,7 @@ body {
     background-repeat: no-repeat;
 }
 
-/* REGISTRO Y LOGIN */
-.registro,
+/* LOGIN */
 .login {
     width: 50%;
     height: 100vh;
@@ -29,11 +29,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px 40px;
-}
-
-/* LOGIN */
-.login {
     padding: 135px 40px 40px;
 }
 
@@ -56,14 +51,6 @@ body {
     max-width: 555px;
 }
 
-.formulario h2 {
-    text-align: center;
-    color: #0b3c70;
-    font-size: 30px;
-    margin-bottom: 30px;
-}
-
-/* GRUPOS */
 .grupo {
     width: 100%;
     margin-bottom: 35px;
@@ -77,13 +64,11 @@ body {
     margin-bottom: 3px;
 }
 
-/* INPUTS */
 .input-contenedor {
     position: relative;
     width: 100%;
 }
 
-.grupo input,
 .input-contenedor input {
     width: 100%;
     height: 50px;
@@ -92,10 +77,9 @@ body {
     padding: 0 15px;
     font-size: 14px;
     outline: none;
-    background-color: white;
+    background: white;
 }
 
-.grupo input:focus,
 .input-contenedor input:focus {
     border: 2px solid #1d5c97;
 }
@@ -104,7 +88,7 @@ body {
     color: #999;
 }
 
-/* OJO DE CONTRASEÑA */
+/* OJO */
 .ojo {
     position: absolute;
     right: 12px;
@@ -116,60 +100,24 @@ body {
     user-select: none;
 }
 
-/* BOTONES */
-.btn-registro,
+/* BOTÓN */
 .btn-login {
     display: block;
+    width: 353px;
+    height: 68px;
+    margin: 67px auto 0;
     background-color: #205895;
     color: white;
     border: none;
     border-radius: 12px;
+    font-size: 27px;
     font-weight: bold;
     cursor: pointer;
-}
-
-.btn-registro {
-    width: 353px;
-    height: 60px;
-    margin: 35px auto 0;
-    font-size: 23px;
-}
-
-.btn-login {
-    width: 353px;
-    height: 68px;
-    margin: 67px auto 0;
-    font-size: 27px;
     transition: 0.2s;
 }
 
-.btn-registro:hover,
 .btn-login:hover {
     background-color: #174a80;
-}
-
-/* INICIAR SESIÓN */
-.iniciar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-    margin-top: 35px;
-}
-
-.iniciar p {
-    font-size: 18px;
-    color: #555;
-}
-
-.iniciar a {
-    font-size: 18px;
-    color: #0b3c70;
-    text-decoration: none;
-}
-
-.iniciar a:hover {
-    text-decoration: underline;
 }
 
 /* CREAR CUENTA */
@@ -198,7 +146,7 @@ body {
     text-decoration: underline;
 }
 
-/* ADAPTACIÓN PARA CELULARES */
+/* RESPONSIVE */
 @media (max-width: 900px) {
     .contenedor {
         flex-direction: column;
@@ -209,7 +157,6 @@ body {
         display: none;
     }
 
-    .registro,
     .login {
         width: 100%;
         min-height: 100vh;
@@ -224,7 +171,6 @@ body {
         max-width: 600px;
     }
 
-    .btn-registro,
     .btn-login {
         width: 100%;
     }
@@ -234,3 +180,4 @@ body {
         flex-direction: column;
     }
 }
+```
