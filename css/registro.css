@@ -140,7 +140,7 @@ body {
     text-decoration: underline;
 }
 
-/* RESPONSIVO */
+
 @media (max-width: 900px) {
 
     .imagen {
