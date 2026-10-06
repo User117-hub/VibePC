@@ -1,22 +1,13 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 body {
     width: 100%;
     height: 100vh;
     overflow: hidden;
 }
-
 .contenedor {
     display: flex;
     width: 100%;
     height: 100vh;
 }
-
 .imagen {
     width: 50%;
     height: 100vh;
@@ -25,7 +16,6 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
-
 .login {
     width: 50%;
     height: 100vh;
@@ -35,7 +25,6 @@ body {
     align-items: center;
     padding: 135px 40px 40px;
 }
-
 .logo {
     font-size: 62px;
     font-weight: bold;
@@ -43,21 +32,17 @@ body {
     margin-bottom: 95px;
     letter-spacing: -3px;
 }
-
 .logo span {
     font-weight: normal;
 }
-
 .formulario {
     width: 100%;
     max-width: 555px;
 }
-
 .grupo {
     width: 100%;
     margin-bottom: 35px;
 }
-
 .grupo label {
     display: block;
     font-size: 27px;
@@ -65,12 +50,10 @@ body {
     color: #0b3c70;
     margin-bottom: 3px;
 }
-
 .input-contenedor {
     position: relative;
     width: 100%;
 }
-
 .input-contenedor input {
     width: 100%;
     height: 50px;
@@ -81,15 +64,12 @@ body {
     outline: none;
     background: white;
 }
-
 .input-contenedor input:focus {
     border: 2px solid #1d5c97;
 }
-
 .input-contenedor input::placeholder {
     color: #999;
 }
-
 .ojo {
     position: absolute;
     right: 12px;
@@ -100,8 +80,6 @@ body {
     cursor: pointer;
     user-select: none;
 }
-
-/* Botón */
 .btn-login {
     display: block;
     width: 353px;
@@ -116,12 +94,9 @@ body {
     cursor: pointer;
     transition: 0.2s;
 }
-
 .btn-login:hover {
     background-color: #174a80;
 }
-
-/* Crear cuenta */
 .crear {
     width: 100%;
     display: flex;
@@ -130,52 +105,41 @@ body {
     gap: 60px;
     margin-top: 68px;
 }
-
 .crear .pregunta {
     font-size: 24px;
     font-weight: bold;
     color: #555;
 }
-
 .crear a {
     font-size: 23px;
     color: #0b3c70;
     text-decoration: none;
 }
-
 .crear a:hover {
     text-decoration: underline;
 }
-
-/* Diseño Responsivo */
 @media (max-width: 900px) {
     .contenedor {
         flex-direction: column;
         overflow-y: auto;
     }
-
     .imagen {
         display: none;
     }
-
     .login {
         width: 100%;
         min-height: 100vh;
         padding: 80px 25px;
     }
-
     .logo {
         margin-bottom: 60px;
     }
-
     .formulario {
         max-width: 600px;
     }
-
     .btn-login {
         width: 100%;
     }
-
     .crear {
         gap: 20px;
         flex-direction: column;
