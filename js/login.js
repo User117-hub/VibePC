@@ -7,7 +7,7 @@ function mostrarPassword() {
         ojo.textContent = "◉";
     } else {
         password.type = "password";
-        ojo.textContent = "◉";
+        ojo.textContent = "◌";
     }
 }
 
