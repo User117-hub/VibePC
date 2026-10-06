@@ -4,28 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VibePC - Iniciar Sesión</title>
-    <!-- Vinculamos la hoja de estilos externa -->
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href= js/login.js>
 </head>
+
 <body>
     <div class="contenedor">
+
         <!-- IMAGEN -->
         <div class="imagen"></div>
         
         <!-- LOGIN -->
         <div class="login">
+
             <!-- LOGO -->
             <div class="logo">
                 Vibe<span>PC</span>
             </div>
             
             <div class="formulario">
+
                 <!-- CORREO -->
                 <div class="grupo">
                     <label for="correo">
                         Correo electrónico
                     </label>
+
                     <div class="input-contenedor">
                         <input
                             type="email"
@@ -40,14 +44,16 @@
                     <label for="password">
                         Contraseña
                     </label>
+
                     <div class="input-contenedor">
                         <input
                             type="password"
                             id="password"
                             placeholder="Mínimo 8 caracteres"
                         >
+
                         <span class="ojo" id="ojo" onclick="mostrarPassword()">
-                            👁️
+                            ◉
                         </span>
                     </div>
                 </div>
@@ -55,9 +61,6 @@
                 <!-- BOTÓN -->
                 <button class="btn-login" onclick="iniciarSesion()">
                     Iniciar Sesión
-                    <a href="vistaproductos.html" class="btn-login">
-                        Iniciar Sesión
-                    </a>
                 </button>
 
                 <!-- CREAR CUENTA -->
@@ -65,14 +68,13 @@
                     <div class="pregunta">
                         ¿No tienes una cuenta?
                     </div>
-                    <!-- Agregué el texto que faltaba en el enlace -->
-                    <a href="principal.html">Regístrate</a>
+
+                    <a href="registro.html">Regístrate</a>
                 </div>
+
             </div>
         </div>
     </div>
-
-    <!-- Vinculamos el archivo de JavaScript externo -->
     <script src="login.js"></script>
 </body>
 </html>
