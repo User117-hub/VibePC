@@ -191,7 +191,7 @@ body {
     cursor: pointer;
 }
 
-.btn-comentarios {
+ .btn-comentarios {
     background-color: #0b4f8a;
     color: #fff;
     border: none;
@@ -199,4 +199,6 @@ body {
     padding: 12px;
     font-weight: bold;
     cursor: pointer;
+    text-align: center;
+    text-decoration: none;
 }

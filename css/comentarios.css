@@ -78,3 +78,6 @@ body {
 .calificacion .material-symbols-outlined{
     font-variation-settings: 'FILL' 1;
 }
+.descripcion a{
+    text-decoration: none;
+}
