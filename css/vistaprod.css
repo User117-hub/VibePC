@@ -1,0 +1,202 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: white;
+    border: solid 2px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header img {
+    margin: 20px;
+}
+
+header .iconos {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.material-symbols-outlined {
+    color: #0089e4;
+}
+
+
+.contenedor-principal-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    max-width: 1300px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.columna-izquierda {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.galeria_producto {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.vistas_prod {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 15%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.vista_gen {
+    display: flex;
+    flex: 1;
+}
+
+.vistas_prod img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.vista_gen img {
+    width: 70%;
+    margin: 30px;
+    height: auto;
+    object-fit: contain;
+}
+
+.especificaciones {
+    margin-top: 40px;
+}
+
+.especificaciones h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.tbl-espec {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f0f6fc;
+    border: 2px solid #333;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.tbl-espec td {
+    padding: 20px 15px;
+    text-align: left;
+    font-size: 15px;
+    color: #111;
+    border: 2px solid #333;
+    vertical-align: top;
+}
+
+.especificaciones p {
+    margin-top: 20px;
+    text-align: left;
+    width: 100%;
+}
+
+
+.panel-compra {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #dcdcdc;
+    margin-top: 10%;
+    padding: 25px;
+    border-radius: 12px;
+    width: 320px;
+    height: 400px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.panel-compra .precio {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.panel-compra .stock {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+.panel-compra .entrega {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 14px;
+}
+
+.panel-compra .entrega strong {
+    font-size: 16px;
+}
+
+.cantidad-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.control-cantidad {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 8px;
+    padding: 8px 15px;
+    font-weight: bold;
+}
+
+.control-cantidad button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.btn-carrito {
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-comentarios {
+    background-color: #0b4f8a;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
