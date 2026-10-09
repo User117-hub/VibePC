@@ -26,6 +26,5 @@ function iniciarSesion() {
     }
 
     alert("Inicio de sesión correcto.");
-
-    
+window.location.href = "vista_producto.html";
 }
