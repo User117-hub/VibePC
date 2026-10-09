@@ -190,3 +190,53 @@ header .iconos a {
 .btn-eliminar:hover {
     background-color: #b52b27;
 }
+
+details {
+    align-self: center;
+    margin-left: 10px;
+}
+
+summary {
+    list-style: none;
+    cursor: pointer;
+    color: #1e88e5;
+}
+
+summary .material-symbols-outlined {
+    font-size: 36px;
+}
+
+.menu_lateral {
+    position: fixed;
+    top: 80px;
+    bottom: 0;
+    left: 0;
+    width: 240px;
+    background-color: #eef5ff;
+}
+
+.menu_lateral ul {
+    list-style: none;
+    margin: 0;
+    padding: 20px 15px;
+}
+
+.menu_lateral li {
+    margin-bottom: 15px;
+}
+
+.menu_lateral a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #0b4a85;
+    color: white;
+    text-decoration: none;
+    padding: 10px 14px;
+}
+header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 10;
+}
