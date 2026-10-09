@@ -132,8 +132,8 @@ summary .material-symbols-outlined {
 .menu_lateral {
     position: fixed;
     top: 80px;
-    left: 0;
     bottom: 0;
+    left: 0;
     width: 240px;
     background-color: #eef5ff;
 }
@@ -156,4 +156,10 @@ summary .material-symbols-outlined {
     color: white;
     text-decoration: none;
     padding: 10px 14px;
+}
+header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 10;
 }
