@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="icon" href="img/logo.ico" type="image/x-icon"/>
+    <link href="css/estilo.css" rel="stylesheet"/>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+    
+    <header>
+    <details>
+        <summary>
+            <span class="material-symbols-outlined">menu</span>
+        </summary>
+        <nav class="menu_lateral">
+            <ul>
+                <li><a class="nav-link" href="AdminProductos.html">Productos</a></li>
+                <li><a class="nav-link" href="AdminClientes.html">Clientes</a></li>
+                <li><a class="nav-link" href="AdminVentas.html">Ventas</a></li>
+                <li><a class="nav-link" href="AdminDetallesVent.html">Detalle ventas</a></li>
+                <li><a href="index.html">Cerrar sesión</a></li>
+            </ul>
+        </nav>
+    </details>
+
+<img src="img/logo.png" width="150" height="50" alt="Logo">
+
+<section class="iconos">
+    <a href="carrito.html">
+        <span class="material-symbols-outlined">shopping_cart</span>
+    </a>
+    <a href="login.html">
+        <span class="material-symbols-outlined">account_circle</span>
+    </a>
+</section>
+</header>
+
+    <main>
+        <!-- SECCIÓN PRODUCTOS -->
+        <section id="tablaProductos" class="seccion-tabla activa pt-5 mt-5">
+            <article class="tablaDatos">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h3 class="m-0">Gestión de Productos</h3>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProductoAgregar">
+                        + Agregar Producto
+                    </button>
+                </div>
+                
+                <table class="table table-hover align-middle">
+                    <thead>
+                        <tr>
+                            <th class="text-center">ID SKU</th>
+                            <th class="text-center">Nombre</th>
+                            <th class="text-center">Categoría</th>
+                            <th class="text-center">Marca</th>
+                            <th class="text-center">Precio ($)</th>
+                            <th class="text-center">Stock</th>
+                            <th class="text-center">Eliminar</th>
+                            <th class="text-center">Actualizar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center">PROD-001</td>
+                            <td>NVIDIA GeForce RTX 4070 Super 12GB</td>
+                            <td class="text-center">Tarjetas Gráficas</td>
+                            <td class="text-center">ASUS</td>
+                            <td class="text-center">$649.99</td>
+                            <td class="text-center">15</td>
+                            <td class="text-center">
+                                <span class="material-symbols-outlined text-danger style-pointer">delete</span>
+                            </td>
+                            <td class="text-center">
+                                <span class="material-symbols-outlined text-success style-pointer" 
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#modalProductoActualizar">edit</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">PROD-002</td>
+                            <td>AMD Ryzen 7 7800X3D 4.2GHz</td>
+                            <td class="text-center">Procesadores</td>
+                            <td class="text-center">AMD</td>
+                            <td class="text-center">$389.00</td>
+                            <td class="text-center">28</td>
+                            <td class="text-center">
+                                <span class="material-symbols-outlined text-danger style-pointer">delete</span>
+                            </td>
+                            <td class="text-center">
+                                <span class="material-symbols-outlined text-success style-pointer" 
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#modalProductoActualizar">edit</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">PROD-003</td>
+                            <td>Corsair Vengeance RGB DDR5 32GB (2x16GB)</td>
+                            <td class="text-center">Memorias RAM</td>
+                            <td class="text-center">Corsair</td>
+                            <td class="text-center">$124.50</td>
+                            <td class="text-center">40</td>
+                            <td class="text-center">
+                                <span class="material-symbols-outlined text-danger style-pointer">delete</span>
+                            </td>
+                            <td class="text-center">
+                                <span class="material-symbols-outlined text-success style-pointer" 
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#modalProductoActualizar">edit</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+    </main>
+
+    <!-- MODAL AGREGAR PRODUCTO -->
+<div class="modal fade" id="modalProductoAgregar" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Agregar Producto</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="prodNombreAgregar" class="form-label">Nombre del Producto:</label>
+            <input type="text" class="form-control" id="prodNombreAgregar" placeholder="Ej. NVIDIA RTX 4070" required>
+          </div>
+          <div class="mb-3">
+            <label for="prodCategoriaAgregar" class="form-label">Categoría:</label>
+            <select class="form-select" id="prodCategoriaAgregar" required>
+              <option value="" selected disabled>Seleccione una categoría</option>
+              <option value="Tarjetas Gráficas">Tarjetas Gráficas</option>
+              <option value="Procesadores">Procesadores</option>
+              <option value="Memorias RAM">Memorias RAM</option>
+              <option value="Almacenamiento SSD">Almacenamiento SSD</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="prodMarcaAgregar" class="form-label">Marca:</label>
+            <input type="text" class="form-control" id="prodMarcaAgregar" placeholder="Ej. ASUS, Corsair, AMD" required>
+          </div>
+          <div class="mb-3">
+            <label for="prodPrecioAgregar" class="form-label">Precio ($):</label>
+            <input type="number" step="0.01" class="form-control" id="prodPrecioAgregar" placeholder="0.00" required>
+          </div>
+          <div class="mb-3">
+            <label for="prodStockAgregar" class="form-label">Stock inicial:</label>
+            <input type="number" class="form-control" id="prodStockAgregar" placeholder="Cantidad de piezas" required>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Guardar Producto</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- MODAL ACTUALIZAR PRODUCTO -->
+<div class="modal fade" id="modalProductoActualizar" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Actualizar Producto</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="prodIdActualizar" class="form-label">SKU / ID Producto:</label>
+            <input type="text" class="form-control" id="prodIdActualizar" readonly value="PROD-001">
+          </div>
+          <div class="mb-3">
+            <label for="prodNombreActualizar" class="form-label">Nombre del Producto:</label>
+            <input type="text" class="form-control" id="prodNombreActualizar" value="NVIDIA GeForce RTX 4070 Super 12GB">
+          </div>
+          <div class="mb-3">
+            <label for="prodCategoriaActualizar" class="form-label">Categoría:</label>
+            <select class="form-select" id="prodCategoriaActualizar">
+              <option value="Tarjetas Gráficas" selected>Tarjetas Gráficas</option>
+              <option value="Procesadores">Procesadores</option>
+              <option value="Memorias RAM">Memorias RAM</option>
+              <option value="Almacenamiento SSD">Almacenamiento SSD</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="prodMarcaActualizar" class="form-label">Marca:</label>
+            <input type="text" class="form-control" id="prodMarcaActualizar" value="ASUS">
+          </div>
+          <div class="mb-3">
+            <label for="prodPrecioActualizar" class="form-label">Precio ($):</label>
+            <input type="number" step="0.01" class="form-control" id="prodPrecioActualizar" value="649.99">
+          </div>
+          <div class="mb-3">
+            <label for="prodStockActualizar" class="form-label">Stock:</label>
+            <input type="number" class="form-control" id="prodStockActualizar" value="15">
+          </div>
+          <button type="submit" class="btn btn-success w-100">Actualizar Producto</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
