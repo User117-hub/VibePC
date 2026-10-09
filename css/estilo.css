@@ -113,42 +113,65 @@ body {
     font-size: 24px;
     color: #000;
 }
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: white;
+    border: solid 2px;
+    display: flex;
+    justify-content: space-between;
+}
 
-details {
+header img {
+    margin: 20px;
+}
+
+header .iconos {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#menu {
+    display: none;
+}
+
+header label {
     align-self: center;
     margin-left: 10px;
-}
-
-summary {
-    list-style: none;
     cursor: pointer;
-    color: #1e88e5;
 }
 
-summary .material-symbols-outlined {
+header label .material-symbols-outlined {
     font-size: 36px;
 }
 
-.menu_lateral {
+.menuDlado {
+    display: none;
     position: fixed;
-    top: 80px;
+    top: 94px;
     bottom: 0;
     left: 0;
     width: 240px;
     background-color: #eef5ff;
 }
 
-.menu_lateral ul {
+#menu:checked + label + .menuDlado {
+    display: block;
+}
+
+.menuDlado ul {
     list-style: none;
-    margin: 0;
     padding: 20px 15px;
 }
 
-.menu_lateral li {
+.menuDlado li {
     margin-bottom: 15px;
 }
 
-.menu_lateral a {
+.menuDlado a {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -157,9 +180,34 @@ summary .material-symbols-outlined {
     text-decoration: none;
     padding: 10px 14px;
 }
-header {
-    position: sticky;
-    top: 0;
-    background-color: white;
-    z-index: 10;
+
+.menuDlado a .material-symbols-outlined {
+    color: white;
+}
+.buscador {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin: 20px;
+}
+
+.buscador input {
+    width: 300px;
+    padding: 5px 10px;
+    border: solid 1px #0b4a85;
+    border-radius: 20px;
+}
+
+.buscador button {
+    border: none;
+    border-radius: 50%;
+    background-color: #0b4a85;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.buscador button .material-symbols-outlined {
+    color: white;
+    font-size: 20px;
 }
