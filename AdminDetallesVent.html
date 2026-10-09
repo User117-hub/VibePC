@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="icon" href="img/logo.ico" type="image/x-icon"/>
+    <link href="css/estilo.css" rel="stylesheet"/>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+   
+    <header>
+    <details>
+        <summary>
+            <span class="material-symbols-outlined">menu</span>
+        </summary>
+        <nav class="menu_lateral">
+            <ul>
+                <li><a class="nav-link" href="#tablaProductos">Productos</a></li>
+                <li><a class="nav-link" href="#tablaClientes">Clientes</a></li>
+                <li><a class="nav-link" href="#tablaVentas">Ventas</a></li>
+                <li><a class="nav-link" href="#tablaDetalleVent">Detalle ventas</a></li>
+                <li><a href="index.html">Cerrar sesión</a></li>
+            </ul>
+        </nav>
+    </details>
+ 
+<img src="img/logo.png" width="150" height="50" alt="Logo">
+ 
+<section class="iconos">
+    <a href="carrito.html">
+        <span class="material-symbols-outlined">shopping_cart</span>
+    </a>
+    <a href="login.html">
+        <span class="material-symbols-outlined">account_circle</span>
+    </a>
+</section>
+</header>
+ 
+    <main>
+        <!-- SECCIÓN VENTAS -->
+        <section id="tablaVentas" class="seccion-tabla pt-5 mt-5">
+            <article class="tablaDatos">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h3 class="m-0">Registro de Ventas</h3>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalVentaAgregar">
+                        + Nueva Venta
+                    </button>
+                </div>
+ 
+                <table class="table table-hover align-middle">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Folio Venta</th>
+                            <th class="text-center">Cliente</th>
+                            <th class="text-center">Fecha</th>
+                            <th class="text-center">Total ($)</th>
+                            <th class="text-center">Método de Pago</th>
+                            <th class="text-center">Estado Pago</th>
+                            <th class="text-center">Eliminar</th>
+                            <th class="text-center">Actualizar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center">V-1001</td>
+                            <td>Carlos Gómez (CLI-101)</td>
+                            <td class="text-center">15/10/2026</td>
+                            <td class="text-center">$1,038.99</td>
+                            <td class="text-center">Tarjeta de Crédito</td>
+                            <td class="text-center"><span class="badge bg-success">Pagado</span></td>
+                            <td class="text-center">
+                                <span class="material-symbols-outlined text-danger style-pointer">delete</span>
+                            </td>
+                            <td class="text-center">
+                                <span class="material-symbols-outlined text-success style-pointer"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#modalVentaActualizar">edit</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">V-1002</td>
+                            <td>Ana Martínez (CLI-102)</td>
+                            <td class="text-center">16/10/2026</td>
+                            <td class="text-center">$124.50</td>
+                            <td class="text-center">PayPal</td>
+                            <td class="text-center"><span class="badge bg-success">Pagado</span></td>
+                            <td class="text-center">
+                                <span class="material-symbols-outlined text-danger style-pointer">delete</span>
+                            </td>
+                            <td class="text-center">
+                                <span class="material-symbols-outlined text-success style-pointer"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#modalVentaActualizar">edit</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+    </main>
+ 
+<!-- MODAL AGREGAR VENTA -->
+<div class="modal fade" id="modalVentaAgregar" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Registrar Nueva Venta</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="ventaClienteAgregar" class="form-label">Cliente:</label>
+            <select class="form-select" id="ventaClienteAgregar" required>
+              <option value="" selected disabled>Seleccione un cliente</option>
+              <option value="CLI-101">Carlos Gómez (CLI-101)</option>
+              <option value="CLI-102">Ana Martínez (CLI-102)</option>
+              <option value="CLI-103">Luis Hernández (CLI-103)</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="ventaFechaAgregar" class="form-label">Fecha:</label>
+            <input type="date" class="form-control" id="ventaFechaAgregar" required>
+          </div>
+          <div class="mb-3">
+            <label for="ventaTotalAgregar" class="form-label">Monto Total ($):</label>
+            <input type="number" step="0.01" class="form-control" id="ventaTotalAgregar" placeholder="0.00" required>
+          </div>
+          <div class="mb-3">
+            <label for="ventaMetodoAgregar" class="form-label">Método de Pago:</label>
+            <select class="form-select" id="ventaMetodoAgregar" required>
+              <option value="Tarjeta de Crédito">Tarjeta de Crédito</option>
+              <option value="PayPal">PayPal</option>
+              <option value="Transferencia">Transferencia</option>
+              <option value="Efectivo">Efectivo</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="ventaEstadoAgregar" class="form-label">Estado de Pago:</label>
+            <select class="form-select" id="ventaEstadoAgregar">
+              <option value="Pagado" selected>Pagado</option>
+              <option value="Pendiente">Pendiente</option>
+              <option value="Reembolsado">Reembolsado</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Registrar Venta</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- MODAL ACTUALIZAR VENTA -->
+<div class="modal fade" id="modalVentaActualizar" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Actualizar Venta</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="ventaFolioActualizar" class="form-label">Folio Venta:</label>
+            <input type="text" class="form-control" id="ventaFolioActualizar" readonly value="V-1001">
+          </div>
+          <div class="mb-3">
+            <label for="ventaClienteActualizar" class="form-label">Cliente:</label>
+            <input type="text" class="form-control" id="ventaClienteActualizar" value="Carlos Gómez (CLI-101)">
+          </div>
+          <div class="mb-3">
+            <label for="ventaFechaActualizar" class="form-label">Fecha:</label>
+            <input type="date" class="form-control" id="ventaFechaActualizar" value="2026-10-15">
+          </div>
+          <div class="mb-3">
+            <label for="ventaTotalActualizar" class="form-label">Monto Total ($):</label>
+            <input type="number" step="0.01" class="form-control" id="ventaTotalActualizar" value="1038.99">
+          </div>
+          <div class="mb-3">
+            <label for="ventaMetodoActualizar" class="form-label">Método de Pago:</label>
+            <select class="form-select" id="ventaMetodoActualizar">
+              <option value="Tarjeta de Crédito" selected>Tarjeta de Crédito</option>
+              <option value="PayPal">PayPal</option>
+              <option value="Transferencia">Transferencia</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="ventaEstadoActualizar" class="form-label">Estado de Pago:</label>
+            <select class="form-select" id="ventaEstadoActualizar">
+              <option value="Pagado" selected>Pagado</option>
+              <option value="Pendiente">Pendiente</option>
+              <option value="Reembolsado">Reembolsado</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-success w-100">Actualizar Venta</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+</body>
+</html>
