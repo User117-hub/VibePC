@@ -7,34 +7,28 @@
 body {
     width: 100%;
     height: 100vh;
-    overflow: hidden;
 }
 
 .contenedor {
     display: flex;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 /* IMAGEN */
 .imagen {
     width: 50%;
-    height: 100vh;
-    background-image: url("gaming.jpg");
+    align-self: stretch;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-/* LOGIN */
-.login {
-    width: 50%;
-    height: 100vh;
-    background-color: #eef8ff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 135px 40px 40px;
+.imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center bottom;
 }
 
 /* LOGO */
