@@ -145,11 +145,25 @@ header label .material-symbols-outlined {
     align-items: center;
     gap: 8px;
     width: 180px;
+    height: 200px;
     padding: 25px 10px;
     background-color: #a9d3ee;
     border-radius: 15px;
     cursor: pointer;
 }
+.opcionn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 180px;
+    height: 150px;
+    padding: 25px 10px;
+    background-color: #a9d3ee;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
 
 .opcion .material-symbols-outlined {
     font-size: 40px;
@@ -175,7 +189,7 @@ header label .material-symbols-outlined {
     cursor: pointer;
 }
 
-/* Pasos del footer */
+
 .pasos {
     display: flex;
     justify-content: space-around;

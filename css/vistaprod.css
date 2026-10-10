@@ -128,7 +128,7 @@ body {
     padding: 25px;
     border-radius: 12px;
     width: 320px;
-    height: 400px;
+    height: 450px;
     flex-shrink: 0;
     box-sizing: border-box;
 }
@@ -189,6 +189,7 @@ body {
     gap: 10px;
     font-weight: bold;
     cursor: pointer;
+    text-decoration: none;
 }
 
  .btn-comentarios {
@@ -202,42 +203,44 @@ body {
     text-align: center;
     text-decoration: none;
 }
+#menu {
+    display: none;
+}
 
-details {
+header label {
     align-self: center;
     margin-left: 10px;
-}
-
-summary {
-    list-style: none;
     cursor: pointer;
-    color: #1e88e5;
 }
 
-summary .material-symbols-outlined {
+header label .material-symbols-outlined {
     font-size: 36px;
 }
 
-.menu_lateral {
+.menuDlado {
+    display: none;
     position: fixed;
-    top: 80px;
+    top: 94px;
     bottom: 0;
     left: 0;
     width: 240px;
     background-color: #eef5ff;
 }
 
-.menu_lateral ul {
+#menu:checked + label + .menuDlado {
+    display: block;
+}
+
+.menuDlado ul {
     list-style: none;
-    margin: 0;
     padding: 20px 15px;
 }
 
-.menu_lateral li {
+.menuDlado li {
     margin-bottom: 15px;
 }
 
-.menu_lateral a {
+.menuDlado a {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -245,6 +248,10 @@ summary .material-symbols-outlined {
     color: white;
     text-decoration: none;
     padding: 10px 14px;
+}
+
+.menuDlado a .material-symbols-outlined {
+    color: white;
 }
 header {
     position: sticky;

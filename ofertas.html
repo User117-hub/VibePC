@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas</title>
+    <link rel="icon" href="img/logo.ico" type="image/x-icon"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="css/ofertas.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+
+    <header>
+        <input type="checkbox" id="menu">
+        <label for="menu">
+            <span class="material-symbols-outlined">menu</span>
+        </label>
+
+        <nav class="menuDlado">
+            <ul>
+                <li><a href="index.html"><span class="material-symbols-outlined">desktop_windows</span>Catálogo</a></li>
+                <li><a href="recomendacion.html"><span class="material-symbols-outlined">lightbulb</span>Recomendación</a></li>
+                <li><a href="ofertas.html"><span class="material-symbols-outlined">sell</span>Ofertas</a></li>
+                <li><a href="soporte.html"><span class="material-symbols-outlined">headset_mic</span>Soporte</a></li>
+                <li><a class="nav-link" data-bs-toggle="modal" data-bs-target="#ModalLogin" href="#"><span class="material-symbols-outlined">settings_account_box</span>Vista Administrador</a></li>
+                <li><a href="login.html"><span class="material-symbols-outlined">logout</span>Cerrar sesión</a></li>
+            </ul>
+        </nav>
+
+        <a href="index.html">
+            <img src="img/logo.png" width="150" height="50" alt="Logo">
+        </a>
+
+        <section class="iconos">
+            <a href="carrito.html">
+                <span class="material-symbols-outlined">shopping_cart</span>
+            </a>
+            <a href="login.html">
+                <span class="material-symbols-outlined">account_circle</span>
+            </a>
+        </section>
+    </header>
+
+    <main class="contenedor-ofertas">
+
+        <h1>Ofertas</h1>
+
+        <section class="lista-ofertas">
+
+            <article class="oferta">
+                <p class="etiqueta">-20%</p>
+                <img src="img/producto1.png" alt="Computadora Gamer">
+                <h2>Computadora Gamer Alchemy Force</h2>
+                <p class="precio-anterior">$50,766.00</p>
+                <p class="precio-oferta">$40,612.00</p>
+                <a class="btn-agregar" href="vista_producto.html">Agregar</a>
+            </article>
+
+            <article class="oferta">
+                <p class="etiqueta">-15%</p>
+                <img src="img/producto1.png" alt="Computadora Gamer">
+                <h2>Computadora Gamer Alchemy Force</h2>
+                <p class="precio-anterior">$30,000.00</p>
+                <p class="precio-oferta">$25,500.00</p>
+                <a class="btn-agregar" href="vista_producto.html">Agregar</a>
+            </article>
+
+            <article class="oferta">
+                <p class="etiqueta">-10%</p>
+                <img src="img/producto1.png" alt="Computadora Gamer">
+                <h2>Computadora Gamer Alchemy Force</h2>
+                <p class="precio-anterior">$20,000.00</p>
+                <p class="precio-oferta">$18,000.00</p>
+                <a class="btn-agregar" href="vista_producto.html">Agregar</a>
+            </article>
+
+        </section>
+
+    </main>
+
+    <!-- The Modal -->
+    <section class="modal" id="ModalLogin">
+        <section class="modal-dialog">
+            <section class="modal-content">
+
+                <section class="modal-header">
+                    <h4 class="modal-title">Iniciar sesion</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </section>
+
+                <section class="modal-body">
+                    <form action="AdminProductos.html">
+                        <section class="mb-3 mt-3">
+                            <label for="email" class="form-label">Correo:</label>
+                            <input type="email" class="form-control" id="email" placeholder="Ejemplo@gmail.com" name="email">
+                        </section>
+                        <section class="mb-3">
+                            <label for="pwd" class="form-label">Contraseña:</label>
+                            <input type="password" class="form-control" id="pwd" placeholder="Minimo 8 caracteres" name="pswd">
+                        </section>
+                        <section class="form-check mb-3">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" name="remember"> Recordarme
+                            </label>
+                        </section>
+                        <button type="submit" class="btn btn-primary">Iniciar sesion</button>
+                    </form>
+                </section>
+
+                <section class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                </section>
+
+            </section>
+        </section>
+    </section>
+
+</body>
+</html>
