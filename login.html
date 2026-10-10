@@ -8,82 +8,35 @@
 </head>
 
 <body>
-    <div class="contenedor">
+    <section class="contenedor">
 
-        <!-- IMAGEN -->
-        <div class="imagen"><img src="img/pc.jpg" alt="PC Gamer"></div>
-        
+        <section class="imagen"></section>
 
-        <!-- LOGIN -->
-        <div class="login">
+        <section class="login">
 
-            <!-- LOGO -->
-            <div class="logo">
-                Vibe<span>PC</span>
-            </div>
+            <h1 class="logo">Vibe<span>PC</span></h1>
 
-            <div class="formulario">
+            <section class="formulario">
 
-                <!-- CORREO -->
-                <div class="grupo">
-                    <label for="correo">
-                        Correo electrónico
-                    </label>
+                <article class="grupo">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" placeholder="ejemplo@gmail.com" required>
+                </article>
 
-                    <div class="input-contenedor">
-                        <input
-                            type="email"
-                            id="correo"
-                            placeholder="ejemplo@gmail.com"
-                            required
-                        >
-                    </div>
-                </div>
+                <article class="grupo">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" placeholder="Mínimo 8 caracteres" required>
+                </article>
 
-                <!-- CONTRASEÑA -->
-                <div class="grupo">
-                    <label for="password">
-                        Contraseña
-                    </label>
+                <a href="index.html" class="btn-login">Iniciar Sesión</a>
 
-                    <div class="input-contenedor">
-                        <input
-                            type="password"
-                            id="password"
-                            placeholder="Mínimo 8 caracteres"
-                            required
-                        >
-
-                        <span
-                            class="ojo"
-                            id="ojo"
-                            onclick="mostrarPassword()"
-                        >
-                            ◉
-                        </span>
-                    </div>
-                </div>
-
-                <!-- BOTÓN -->
-                <button class="btn-login" onclick="iniciarSesion()">
-                    Iniciar Sesión
-                </button>
-
-                <!-- CREAR CUENTA -->
-                <div class="crear">
-                    <div class="pregunta">
-                        ¿No tienes una cuenta?
-                    </div>
-
+                <article class="crear">
+                    <p>¿No tienes una cuenta?</p>
                     <a href="registro.html">Regístrate</a>
-                </div>
+                </article>
 
-            </div>
-        </div>
-    </div>
-
-    <!-- JAVASCRIPT -->
-    <script src="js/login.js"></script>
+            </section>
+        </section>
+    </section>
 </body>
 </html>
-

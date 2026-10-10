@@ -4,118 +4,74 @@
     padding: 0;
 }
 
-body {
-    width: 100%;
-    height: 100vh;
-}
-
 .contenedor {
     display: flex;
-    width: 100%;
-    min-height: 100vh;
+    height: 100vh;
 }
-
-/* IMAGEN */
+ 
 .imagen {
     width: 50%;
-    align-self: stretch;
+    background-image: url("../img/pc.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.imagen img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center bottom;
-}
 
-/* LOGIN */
 .login {
     width: 50%;
-    height: 100vh;
     background-color: #eef8ff;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 135px 40px 40px;
+    padding: 40px;
 }
 
-/* LOGO */
+
 .logo {
     font-size: 62px;
     font-weight: bold;
     color: #3184d7;
-    margin-bottom: 95px;
-    letter-spacing: -3px;
+    margin-bottom: 60px;
 }
 
 .logo span {
     font-weight: normal;
 }
 
-/* FORMULARIO */
 .formulario {
     width: 100%;
     max-width: 555px;
 }
 
 .grupo {
-    width: 100%;
     margin-bottom: 35px;
 }
 
 .grupo label {
     display: block;
     font-size: 27px;
-    font-weight: 500;
     color: #0b3c70;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
 }
 
-.input-contenedor {
-    position: relative;
-    width: 100%;
-}
-
-.input-contenedor input {
+.grupo input {
     width: 100%;
     height: 50px;
     border: 1px solid #222;
     border-radius: 3px;
     padding: 0 15px;
     font-size: 14px;
-    outline: none;
-    background: white;
+    background-color: white;
 }
 
-.input-contenedor input:focus {
-    border: 2px solid #1d5c97;
-}
 
-.input-contenedor input::placeholder {
-    color: #999;
-}
-
-/* OJO */
-.ojo {
-    position: absolute;
-    right: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 20px;
-    color: #0b3c70;
-    cursor: pointer;
-    user-select: none;
-}
-
-/* BOTÓN */
 .btn-login {
     display: block;
     width: 353px;
     height: 68px;
-    margin: 67px auto 0;
+    margin: 50px auto 0;
     background-color: #205895;
     color: white;
     border: none;
@@ -123,24 +79,24 @@ body {
     font-size: 27px;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.2s;
+    text-align: center;
+    text-decoration: none;
+    padding: 18px;
 }
 
 .btn-login:hover {
     background-color: #174a80;
 }
 
-/* CREAR CUENTA */
 .crear {
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 60px;
-    margin-top: 68px;
+    gap: 40px;
+    margin-top: 50px;
 }
 
-.crear .pregunta {
+.crear p {
     font-size: 24px;
     font-weight: bold;
     color: #555;
@@ -154,40 +110,5 @@ body {
 
 .crear a:hover {
     text-decoration: underline;
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-    .contenedor {
-        flex-direction: column;
-        overflow-y: auto;
-    }
-
-    .imagen {
-        display: none;
-    }
-
-    .login {
-        width: 100%;
-        min-height: 100vh;
-        padding: 80px 25px;
-    }
-
-    .logo {
-        margin-bottom: 60px;
-    }
-
-    .formulario {
-        max-width: 600px;
-    }
-
-    .btn-login {
-        width: 100%;
-    }
-
-    .crear {
-        gap: 20px;
-        flex-direction: column;
-    }
 }
 
